@@ -38,7 +38,7 @@ const Header = () => {
               </li>
             </ul>
           </div>
-          <a className="btn btn-ghost text-4xl font-bold text-default-color">
+          <a className="btn btn-ghost md:lg:text-4xl text-xl font-bold text-default-color">
             Chef's Table
           </a>
         </div>
