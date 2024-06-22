@@ -11,8 +11,12 @@ const Banner = () => {
             Learn basic cooking skills at our state of the art kitchens with
             Michelin star chefs
           </p>
-          <button className="btn btn-primary mr-3">Explore Now</button>
-          <button className="btn btn-primary">Our Feedback</button>
+          <button className="btn btn-primary text-lg font-medium bg-green-400 text-default-color mr-3">
+            Explore Now
+          </button>
+          <button className="btn btn-primary text-lg font-medium bg-green-400 text-default-color">
+            Our Feedback
+          </button>
         </div>
       </div>
     </div>
