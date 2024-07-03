@@ -1,8 +1,9 @@
 import PropTypes from "prop-types";
 import { IoTimeOutline } from "react-icons/io5";
 import { AiOutlineFire } from "react-icons/ai";
+import { ToastContainer } from "react-toastify";
 
-const Menu = ({ menu }) => {
+const Menu = ({ menu, handleWantToCook }) => {
   const {
     recipe_image,
     recipe_name,
@@ -41,15 +42,20 @@ const Menu = ({ menu }) => {
         <p className="text-base font-normal">{calories}</p>
       </div>
 
-      <button className="btn btn-primary text-lg font-medium bg-green-400 text-default-color">
+      <button
+        onClick={() => handleWantToCook(menu)}
+        className="btn btn-primary text-lg font-medium bg-green-400 text-default-color"
+      >
         Want To Cook
       </button>
+      <ToastContainer />
     </div>
   );
 };
 
 Menu.propTypes = {
   menu: PropTypes.object.isRequired,
+  handleWantToCook: PropTypes.func,
 };
 
 export default Menu;

@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Menu from "../Menu/Menu";
 
-const Menus = () => {
+const Menus = ({ handleWantToCook }) => {
   const [menus, setMenus] = useState([]);
 
   useEffect(() => {
@@ -13,15 +13,17 @@ const Menus = () => {
   }, []);
 
   return (
-    <div className="md:w-2/3 lg:w-2/3 grid grid-cols-2 gap-5 mb-5">
+    <div className="w-auto md:lg:w-2/3 grid grid-cols-1 md:lg:grid-cols-2 gap-5 mb-5">
       {/* <h1 className="text-4xl">Menus: {Menus.length}</h1> */}
       {menus.map((menu, idx) => (
-        <Menu key={idx} menu={menu}></Menu>
+        <Menu key={idx} menu={menu} handleWantToCook={handleWantToCook}></Menu>
       ))}
     </div>
   );
 };
 
-Menus.propTypes = {};
+Menus.propTypes = {
+  handleWantToCook: PropTypes.func,
+};
 
 export default Menus;
