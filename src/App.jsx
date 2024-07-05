@@ -41,7 +41,9 @@ function App() {
   };
 
   const handleAddToPrepare = (id, menu, time, calorie) => {
-    const removeFromCooking = cookings.filter((cooking) => cooking.id === id);
+    const removeFromCooking = cookings.filter(
+      (cooking) => cooking.recipe_id !== id
+    );
     setCookings(removeFromCooking);
     console.log(`${id} removed`);
 
