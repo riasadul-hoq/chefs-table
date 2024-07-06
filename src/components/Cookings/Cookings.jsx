@@ -15,7 +15,6 @@ const Cookings = ({
         Want to Cook : {cookings.length}
       </h1>
       <hr className="border-[1px]"></hr>
-
       {cookings.map((cooking, idx) => (
         <Cooking
           key={idx}

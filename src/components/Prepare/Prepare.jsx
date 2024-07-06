@@ -32,7 +32,7 @@ const Prepare = ({ preparing, cookingTime, totalCalories }) => {
 };
 
 Prepare.propTypes = {
-  preparing: PropTypes.array,
+  preparing: PropTypes.object,
   cookingTime: PropTypes.number,
   totalCalories: PropTypes.number,
 };

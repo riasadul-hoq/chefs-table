@@ -63,7 +63,7 @@ function App() {
       <div className="container mx-auto mt-10">
         <Banner></Banner>
         <Recipe></Recipe>
-        <div className="md:lg:flex gap-5">
+        <div className="flex flex-col-reverse md:lg:flex-row gap-5">
           <Menus handleWantToCook={handleWantToCook}></Menus>
 
           <Cookings
